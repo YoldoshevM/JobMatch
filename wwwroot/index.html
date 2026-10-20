@@ -1,0 +1,722 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color" content="#071225">
+
+    <meta name="description"
+          content="JobMatch - Explore career opportunities, upload your CV and analyze your skills against job requirements.">
+
+    <title>JobMatch — Career Intelligence</title>
+
+    <!-- MAIN STYLES -->
+    <link rel="stylesheet"
+          href="/css/style.css?v=3.0.1">
+
+    <!-- MAIN JAVASCRIPT -->
+    <script src="/js/app.js?v=3.0.1" defer></script>
+</head>
+
+<body>
+
+    <!-- ANIMATED BACKGROUND -->
+    <div class="ambient ambient-one"></div>
+    <div class="ambient ambient-two"></div>
+
+    <div class="layout">
+
+        <!-- ===================================
+             SIDEBAR
+             =================================== -->
+
+        <aside class="sidebar">
+
+            <a class="brand" href="#dashboard">
+                <span class="brand-symbol">✦</span>
+                Job<span>Match</span>
+            </a>
+
+            <div class="nav-heading">
+                WORKSPACE
+            </div>
+
+            <nav class="navigation"
+                 aria-label="Main navigation">
+
+                <a href="#dashboard"
+                   class="nav-link active"
+                   data-page="dashboard">
+
+                    <span>◈</span>
+                    Dashboard
+                </a>
+
+                <a href="#vacancies"
+                   class="nav-link"
+                   data-page="vacancies">
+
+                    <span>▦</span>
+                    Vacancies
+                </a>
+
+                <a href="#resume"
+                   class="nav-link"
+                   data-page="resume">
+
+                    <span>▤</span>
+                    My Resume
+                </a>
+
+                <a href="#results"
+                   class="nav-link"
+                   data-page="results">
+
+                    <span>◎</span>
+                    Match Results
+                </a>
+
+            </nav>
+
+            <div class="sidebar-footer">
+                <span class="online-dot"></span>
+                Local Workspace
+            </div>
+
+        </aside>
+
+        <!-- ===================================
+             MAIN CONTENT
+             =================================== -->
+
+        <main class="main">
+
+            <!-- TOPBAR -->
+
+            <header class="topbar">
+
+                <div class="breadcrumb">
+                    Workspace /
+                    <strong id="pageName">
+                        Dashboard
+                    </strong>
+                </div>
+
+                <div class="topbar-actions">
+
+                    <span class="api-status"
+                          id="apiStatus">
+
+                        <span class="online-dot"></span>
+                        Connecting...
+
+                    </span>
+
+                    <div class="avatar">
+                        JM
+                    </div>
+
+                </div>
+
+            </header>
+
+            <!-- ===================================
+                 DASHBOARD PAGE
+                 =================================== -->
+
+            <section id="dashboard"
+                     class="page active-page">
+
+                <div class="hero">
+
+                    <div class="hero-content">
+
+                        <div class="eyebrow">
+                            ✦ YOUR CAREER,
+                            INTELLIGENTLY MATCHED
+                        </div>
+
+                        <h1>
+                            Your next opportunity
+
+                            <span class="gradient-text">
+                                starts here.
+                            </span>
+                        </h1>
+
+                        <p>
+                            Explore job opportunities,
+                            understand vacancy requirements
+                            and discover how your skills
+                            align with your next role.
+                        </p>
+
+                        <a href="#vacancies"
+                           class="btn btn-primary">
+
+                            Explore Opportunities ↗
+
+                        </a>
+
+                    </div>
+
+                    <div class="hero-art"
+                         aria-hidden="true">
+
+                        <div class="orbit orbit-a"></div>
+
+                        <div class="orbit orbit-b"></div>
+
+                        <div class="orbit-center">
+                            ✦
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- DASHBOARD STATISTICS -->
+
+                <div class="stats-grid">
+
+                    <div class="glass stat-card">
+
+                        <div class="stat-label">
+                            AVAILABLE VACANCIES
+                        </div>
+
+                        <div class="stat-value"
+                             id="vacancyCount">
+                            —
+                        </div>
+
+                        <div class="stat-foot">
+                            Stored in PostgreSQL
+                        </div>
+
+                    </div>
+
+                    <div class="glass stat-card">
+
+                        <div class="stat-label">
+                            YOUR RESUMES
+                        </div>
+
+                        <div class="stat-value"
+                             id="resumeCount">
+                            —
+                        </div>
+
+                        <div class="stat-foot">
+                            Your CV profiles
+                        </div>
+
+                    </div>
+
+                    <div class="glass stat-card">
+
+                        <div class="stat-label">
+                            MATCH ENGINE
+                        </div>
+
+                        <div class="stat-value cyan">
+                            Ready
+                        </div>
+
+                        <div class="stat-foot">
+                            Skill-based comparison
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- DASHBOARD FEATURES -->
+
+                <div class="dashboard-grid">
+
+                    <div class="glass feature-card">
+
+                        <div class="eyebrow">
+                            CAREER EXPLORER
+                        </div>
+
+                        <h2>
+                            Find your direction.
+                        </h2>
+
+                        <p>
+                            Browse vacancies, inspect
+                            technical requirements and
+                            follow application links.
+                        </p>
+
+                        <a href="#vacancies"
+                           class="btn btn-secondary">
+
+                            Browse Vacancies →
+
+                        </a>
+
+                    </div>
+
+                    <div class="glass feature-card">
+
+                        <div class="eyebrow">
+                            SKILL INTELLIGENCE
+                        </div>
+
+                        <h2>
+                            Discover your match.
+                        </h2>
+
+                        <p>
+                            Compare your CV with
+                            the technical requirements
+                            of your chosen position.
+                        </p>
+
+                        <a href="#results"
+                           class="btn btn-secondary">
+
+                            Start Analysis →
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- ===================================
+                 VACANCIES PAGE
+                 =================================== -->
+
+            <section id="vacancies"
+                     class="page content-page">
+
+                <div class="page-header">
+
+                    <div class="eyebrow">
+                        DISCOVER OPPORTUNITIES
+                    </div>
+
+                    <h1>
+                        Explore
+                        <span class="gradient-inline">
+                            Vacancies.
+                        </span>
+                    </h1>
+
+                    <p>
+                        Review companies, responsibilities
+                        and technical requirements
+                        before applying.
+                    </p>
+
+                </div>
+
+                <!-- SEARCH -->
+
+                <div class="glass search-bar">
+
+                    <span class="search-icon">
+                        ⌕
+                    </span>
+
+                    <input id="vacancySearch"
+                           type="search"
+                           placeholder="Search jobs, companies, locations or skills..."
+                           aria-label="Search vacancies">
+
+                    <span class="result-count"
+                          id="vacancyResultCount">
+
+                        Loading...
+
+                    </span>
+
+                </div>
+
+                <!-- VACANCY CARDS -->
+
+                <div class="vacancy-grid"
+                     id="vacancyList">
+
+                    <div class="glass empty-state">
+                        Loading vacancies...
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- ===================================
+                 RESUME PAGE
+                 =================================== -->
+
+            <section id="resume"
+                     class="page content-page">
+
+                <div class="page-header">
+
+                    <div class="eyebrow">
+                        YOUR PROFESSIONAL PROFILE
+                    </div>
+
+                    <h1>
+                        My
+                        <span class="gradient-inline">
+                            Resume.
+                        </span>
+                    </h1>
+
+                    <p>
+                        Manage your existing resume
+                        profile and upload a document
+                        for skill analysis.
+                    </p>
+
+                </div>
+
+                <div class="resume-grid">
+
+                    <!-- UPLOAD PANEL -->
+
+                    <div class="glass panel">
+
+                        <div class="panel-icon">
+                            ↥
+                        </div>
+
+                        <h2>
+                            Upload your CV
+                        </h2>
+
+                        <p class="muted">
+                            Select a profile already
+                            stored in your database,
+                            then choose a PDF or DOCX file.
+                        </p>
+
+                        <div class="field">
+
+                            <label for="uploadResumeSelect">
+                                Resume Profile
+                            </label>
+
+                            <select id="uploadResumeSelect">
+
+                                <option value="">
+                                    Loading...
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                        <div class="field">
+
+                            <label for="cvFile">
+                                CV Document
+                            </label>
+
+                            <input type="file"
+                                   id="cvFile"
+                                   accept=".pdf,.docx">
+
+                            <small>
+                                PDF or DOCX · Maximum 5 MB
+                            </small>
+
+                        </div>
+
+                        <button id="uploadButton"
+                                type="button"
+                                class="btn btn-primary btn-wide">
+
+                            Upload Resume ↗
+
+                        </button>
+
+                        <div id="uploadStatus"
+                             class="feedback"
+                             role="status">
+                        </div>
+
+                    </div>
+
+                    <!-- HOW IT WORKS -->
+
+                    <div class="glass panel">
+
+                        <div class="eyebrow">
+                            HOW IT WORKS
+                        </div>
+
+                        <h2>
+                            From CV to opportunity.
+                        </h2>
+
+                        <div class="guide-step">
+
+                            <span>01</span>
+
+                            <div>
+
+                                <h3>
+                                    Select your profile
+                                </h3>
+
+                                <p>
+                                    Choose a resume record
+                                    from PostgreSQL.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                        <div class="guide-step">
+
+                            <span>02</span>
+
+                            <div>
+
+                                <h3>
+                                    Upload your document
+                                </h3>
+
+                                <p>
+                                    Attach your CV to
+                                    the selected profile.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                        <div class="guide-step">
+
+                            <span>03</span>
+
+                            <div>
+
+                                <h3>
+                                    Analyze your skills
+                                </h3>
+
+                                <p>
+                                    Compare your CV
+                                    against a vacancy.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                        <a href="#results"
+                           class="btn btn-secondary">
+
+                            Open Match Analyzer →
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- ===================================
+                 MATCH RESULTS PAGE
+                 =================================== -->
+
+            <section id="results"
+                     class="page content-page">
+
+                <div class="page-header">
+
+                    <div class="eyebrow">
+                        SKILL INTELLIGENCE ENGINE
+                    </div>
+
+                    <h1>
+                        Match
+                        <span class="gradient-inline">
+                            Analyzer.
+                        </span>
+                    </h1>
+
+                    <p>
+                        Compare your CV with a
+                        vacancy's stored technical
+                        requirements.
+                    </p>
+
+                </div>
+
+                <div class="glass panel analyzer-panel">
+
+                    <div class="analyzer-heading">
+
+                        <div class="panel-icon">
+                            ✦
+                        </div>
+
+                        <div>
+
+                            <h2>
+                                Analyze your compatibility
+                            </h2>
+
+                            <p class="muted">
+                                Choose a resume
+                                and a target vacancy.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <!-- ANALYSIS FORM -->
+
+                    <div class="form-grid">
+
+                        <div class="field">
+
+                            <label for="resumeSelect">
+                                Your Resume
+                            </label>
+
+                            <select id="resumeSelect">
+
+                                <option value="">
+                                    Loading resumes...
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                        <div class="field">
+
+                            <label for="vacancySelect">
+                                Target Vacancy
+                            </label>
+
+                            <select id="vacancySelect">
+
+                                <option value="">
+                                    Loading vacancies...
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+                    <button id="analyzeButton"
+                            type="button"
+                            class="btn btn-primary">
+
+                        Analyze My Match ✦
+
+                    </button>
+
+                    <!-- ===================================
+                         DYNAMIC ANALYSIS RESULTS
+
+                         app.js shu yerga:
+                         - Match Percentage
+                         - Matched Skills
+                         - Missing Required Skills
+                         - Missing Optional Skills
+                         - Recommendations
+                         - APPLY NOW BUTTON
+
+                         qo'shadi.
+                         =================================== -->
+
+                    <div id="matchResult"
+                         role="status"
+                         aria-live="polite">
+                    </div>
+
+                </div>
+
+                <p class="disclaimer">
+                    Match percentage represents
+                    weighted skill overlap,
+                    not your probability
+                    of being hired.
+                </p>
+
+            </section>
+
+            <!-- FOOTER -->
+
+            <footer>
+                JobMatch © 2026 ·
+                Career Intelligence Platform
+            </footer>
+
+        </main>
+
+    </div>
+
+    <!-- ===================================
+         VACANCY DETAILS DRAWER
+         =================================== -->
+
+    <div id="vacancyDrawer"
+         class="jm-drawer-root"
+         aria-hidden="true">
+
+        <!-- BACKDROP -->
+
+        <div id="jmDrawerBackdrop"
+             class="jm-drawer-backdrop">
+        </div>
+
+        <!-- DRAWER PANEL -->
+
+        <aside class="jm-drawer"
+               role="dialog"
+               aria-modal="true"
+               aria-labelledby="jmDrawerTitle">
+
+            <div class="jm-drawer-top">
+
+                <span class="jm-drawer-label">
+                    ✦ JOBMATCH / OPPORTUNITY
+                </span>
+
+                <button id="jmDrawerClose"
+                        class="jm-drawer-close"
+                        type="button"
+                        aria-label="Close details">
+
+                    ✕
+
+                </button>
+
+            </div>
+
+            <div id="jmDrawerContent"
+                 class="jm-drawer-content">
+            </div>
+
+        </aside>
+
+    </div>
+
+</body>
+</html>

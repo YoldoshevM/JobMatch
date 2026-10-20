@@ -1,0 +1,24 @@
+﻿# Visual Studio
+.vs/
+.vscode/
+*.user
+*.suo
+
+# Build files
+bin/
+obj/
+
+# Local secrets
+appsettings.Development.json
+.env
+.env.*
+secrets.json
+
+# Uploaded CV files
+uploads/
+**/uploads/
+
+# Temporary files
+*.log
+
+appsettings.json
